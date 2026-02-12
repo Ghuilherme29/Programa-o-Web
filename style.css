@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: rgb(0, 183, 255);
-    background-image: url("van\ gogh.jpg");
+    background-color: rgb(253, 253, 253);
+    background-image: url("assets/background\ branco\ -\ Pesquisa\ Google_files/");
 
     background-repeat: no-repeat;
     background-position: center;
@@ -26,6 +26,74 @@ p {
     font-size: 15px;
     font-family: 'Arial';
     margin: 20px;
-    color: rgb(253, 236, 239);
-    
+    color: rgb(255, 230, 7);
+}
+
+ /* AULA 12/02/2026  */
+
+hr {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+button {
+    display: block;
+    height: auto;
+    margin: 20px auto;
+    padding: 10px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ol {
+    margin: 10px auto;
+    padding: 30px auto;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+h3 {
+    text-align: center;
+    color: rgb(20, 113, 220);
+    margin: 40px;
+}
+
+img {
+    display: block;
+    max-width:300px;
+    margin: 10px auto;
+}
+
+
+
+a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px auto;
+    color: crimson;
+}
+
+.input-group {
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+    margin:20px auto;
+    width: 100%;
+}
+input[type="text"] {
+    margin: 0px auto;
+    text-align: center;
+    display: block;
+    border-radius: 3px;
+    outline: none;
 }
