@@ -5,20 +5,40 @@
     box-sizing: border-box;
 }
 
-body {
+  
+
+.index {
+   background-color: ;
+   background-image: image();
+
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+
+}
+
+.segunda_pagina {
+    background-image: url("assets/kaneki-ken.jpg");
+}
+
+
+
+h2 {
+    text-align: center;
+    font-size: 60px;
+}
+
+.terceira_pagina {    
     background-color: rgba(255, 0, 0, 0.699);
-    background-image: url("assets/Z8uxCV.webp");
+    background-image: url("assets/1023193.jpg");
     
 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-}
 
-h2 {
-    text-align: center;
-    font-size: 60px;
 }
 
 p {
@@ -34,6 +54,9 @@ a {
     text-decoration: none;
 }
 
+
+
+
 img {
     display: block;
     max-width: 300px;
@@ -43,6 +66,18 @@ img {
 button {
     display: block;
     margin: 20px auto;
-    
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
 }
 
+ol {
+    padding: 30px auto;
+    text-align: center;
+    list-style-position: inside;
+}
+
+li {
+font-size: 15px;
+font-weight: bold;
+color: crimson;}
