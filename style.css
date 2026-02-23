@@ -1,4 +1,4 @@
-/* RESET DE CONFIGURAÇÕES */
+   /* RESET DAS CONFIGURAÇÕES DO NAVEGADOR */
 * {
     margin: 0;
     padding: 0;
@@ -6,94 +6,43 @@
 }
 
 body {
-    background-color: rgb(253, 253, 253);
-    background-image: url("assets/background\ branco\ -\ Pesquisa\ Google_files/");
+    background-color: rgba(255, 0, 0, 0.699);
+    background-image: url("assets/Z8uxCV.webp");
+    
 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    
+}
 
-h1 {
+h2 {
     text-align: center;
-    color: rgb(255, 255, 255);
-    font-size: 50px;
+    font-size: 60px;
 }
-}
+
 p {
     text-align: justify;
     font-size: 15px;
-    font-family: 'Arial';
-    margin: 20px;
-    color: rgb(255, 230, 7);
+    margin: 30px 20px;
+    font-family: "";
+    color: crimson;
 }
-
- /* AULA 12/02/2026  */
-
-hr {
-    max-width: 50%;
-    margin: 0 auto;
-}
-
-button {
-    display: block;
-    height: auto;
-    margin: 20px auto;
-    padding: 10px 30px;
-    border-radius: 6px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-ol {
-    margin: 10px auto;
-    padding: 30px auto;
-    margin-bottom: 30px;
-    text-align: center;
-
-}
-
-li {
-    font-size: 14px;
-    margin-bottom: 10px;
-    font-weight: 500;
-}
-
-h3 {
-    text-align: center;
-    color: rgb(20, 113, 220);
-    margin: 40px;
-}
-
-img {
-    display: block;
-    max-width:300px;
-    margin: 10px auto;
-}
-
-
-
 a {
     display: block;
     text-align: center;
     text-decoration: none;
-    margin: 10px auto;
-    color: crimson;
 }
 
-.input-group {
-    display: flex;
-    gap:10px;
-    justify-content: center;
-    align-items: center;
-    margin:20px auto;
-    width: 100%;
-}
-input[type="text"] {
-    margin: 0px auto;
-    text-align: center;
+img {
     display: block;
-    border-radius: 3px;
-    outline: none;
+    max-width: 300px;
+    margin: 10px auto;
 }
+
+button {
+    display: block;
+    margin: 20px auto;
+    
+}
+
