@@ -1,0 +1,97 @@
+/* Reset básico para alinhamento perfeito */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da tela e centralização */
+body {
+    background-color: #f3f4f6; /* Cinza bem claro e neutro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #1f2937;
+}
+
+/* O cartão principal */
+.container {
+    background-color: #ffffff;
+    padding: 35px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Sombra mais suave e elegante */
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #6366f1; /* Roxo/Índigo vibrante */
+    margin-bottom: 25px;
+}
+
+/* Textos acima das caixas (Labels) */
+label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #4b5563;
+}
+
+/* Caixas de digitar as notas (Inputs) */
+input {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 18px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao clicar na caixa de texto */
+input:focus {
+    border-color: #6366f1;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2); /* Brilho roxo em volta */
+}
+
+/* Estilo para um botão (Caso você adicione um ao HTML) */
+button {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #4f46e5; /* Roxo mais escuro ao passar o mouse */
+}
+
+button:active {
+    transform: scale(0.98); /* Efeito de "afundar" ao clicar */
+}
+
+/* Caixa onde a média vai aparecer */
+#resultado {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #e0e7ff; /* Fundo roxo bem clarinho */
+    border-left: 5px solid #6366f1;
+    border-radius: 6px;
+    color: #3730a3;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    display: none; /* Fica invisível até o JavaScript ativar */
+}

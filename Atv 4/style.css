@@ -1,0 +1,98 @@
+/* Reset básico para manter tudo alinhado */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Fundo da página (um cinza bem clarinho e neutro) */
+body {
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #212529;
+}
+
+/* O cartão principal da nossa "urna" */
+.container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px; /* Deixei um pouco mais largo por causa do seu placeholder longo */
+    border-top: 6px solid #28a745; /* Linha verde no topo para dar o clima de eleição */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 25px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Texto acima da caixa (Label) */
+label {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #495057;
+}
+
+/* Caixa de digitar a idade (Input) */
+input {
+    padding: 12px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+/* Efeito ao clicar na caixa de texto */
+input:focus {
+    border-color: #28a745; /* Fica verde ao clicar */
+    outline: none;
+}
+
+/* Botão "Checar idade" (Estilo botão CONFIRMA) */
+button {
+    background-color: #28a745; /* Verde urna eletrônica */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #218838; /* Verde mais escuro */
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Caixa de resultado (Invisível no começo) */
+#resultado {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 18px;
+    display: none; /* Só aparece quando o JS for ativado */
+}

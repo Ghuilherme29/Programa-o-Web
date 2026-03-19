@@ -1,0 +1,87 @@
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo com um tom de bege clarinho (lembrando papel de mercado) */
+body {
+    background-color: #fdf5e6; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* O cartão da calculadora */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    border: 2px solid #e74c3c; /* Borda vermelha maçã */
+}
+
+/* Título com cor de maçã madura */
+h1 {
+    color: #c0392b;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Estilo da pergunta */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Caixa de entrada */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #27ae60; /* Fica verde ao clicar */
+}
+
+/* Botão Calcular (Verde folha) */
+button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #219150;
+}
+
+/* Div de resultado */
+#resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 5px solid #e74c3c;
+    color: #333;
+    font-size: 18px;
+    display: none; /* Começa escondido */
+}
