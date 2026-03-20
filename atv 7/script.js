@@ -13,12 +13,33 @@ function realizarCalculos() {
     return;
     }
 
+    
+
     let media = (Nt1 + Nt2 + Nt3) / 3;
 
     let situacao = '';
-    if (media <=7 ) {
-    situacao = "<strong style = 'color: red';> Aprovado </strong>";
-    } else if (media >= 5 || media <= 6.9 ) {
+    if (media >=7 ) {
+    situacao = "<strong style = 'color: green';> Aprovado </strong>";
+    } if (Nt1 < 1 || Nt1 >10){
+        resultadoDiv.innerHTML = "<p style='color: #d32f2f;'> A 1ª nota é inválida ! Diga uma nota válida.</p>"
+        resultadoDiv.style.display = "block";
+        campoNt1.value = "";
+        campoNt1.focus();
+        return;
+    } if (Nt2 < 1 || Nt2 >10){
+        resultadoDiv.innerHTML = "<p style='color: #d32f2f;'> A 2ª nota é inválida ! Diga uma nota válida.</p>"
+        resultadoDiv.style.display = "block";
+        campoNt1.value = "";
+        campoNt1.focus();
+        return;
+    } if (Nt3 < 1 || Nt3 >10){
+        resultadoDiv.innerHTML = "<p style='color: #d32f2f;'> A 3ª nota é inválida ! Diga uma nota válida.</p>"
+        resultadoDiv.style.display = "block";
+        campoNt1.value = "";
+        campoNt1.focus();
+        return;
+    }
+    else if (media >= 5.1 || media == 6.9 ) {
         situacao = "<strong style = 'color: yellow';> Em recuperação </strong>";
     } else {
         situacao = "<strong style = 'color: red';> Reprovado </strong>";
