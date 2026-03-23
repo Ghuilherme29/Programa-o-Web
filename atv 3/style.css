@@ -1,97 +1,186 @@
-/* Reset básico para alinhamento perfeito */
+/* style.css */
+
+/* Importando uma fonte elegante e super moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+/* Reset básico para remover margens e paddings padrão do navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Aplicando a nova fonte */
 }
 
-/* Fundo da tela e centralização */
+/* O fundo da página com um gradiente suave e relaxante */
 body {
-    background-color: #f3f4f6; /* Cinza bem claro e neutro */
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: #1f2937;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-/* O cartão principal */
+/* O Container Principal - Onde a Mágica do Vidro Acontece! */
 .container {
-    background-color: #ffffff;
-    padding: 35px 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Sombra mais suave e elegante */
+    background: rgba(255, 255, 255, 0.6); /* Translucidez suave */
+    backdrop-filter: blur(15px); /* O efeito de desfoque de vidro */
+    -webkit-backdrop-filter: blur(15px); /* Para navegadores Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Uma borda sutil e brilhante */
+    padding: 50px 40px;
+    border-radius: 30px; /* Bordas bem arredondadas */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1); /* Uma sombra profunda e difusa */
     width: 100%;
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Título */
-h1 {
+    max-width: 420px;
     text-align: center;
-    color: #6366f1; /* Roxo/Índigo vibrante */
-    margin-bottom: 25px;
+    /* Uma animação sutil de entrada para a página */
+    animation: slideIn 0.8s ease; 
 }
 
-/* Textos acima das caixas (Labels) */
+/* Animação de entrada do container */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título Moderno e Elegante */
+h1 {
+    color: #333;
+    margin-bottom: 35px;
+    font-size: 36px;
+    font-weight: 800; /* Texto bem grosso */
+    letter-spacing: -2px; /* Letras juntinhas */
+    position: relative;
+    display: inline-block;
+}
+
+/* Uma linha decorativa e colorida embaixo do título */
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 6px;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    border-radius: 10px;
+    margin: 10px auto 0;
+}
+
+/* Etiquetas (Labels) Modernas */
 label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: 6px;
-    color: #4b5563;
+    color: #555;
+    transition: color 0.3s ease;
 }
 
-/* Caixas de digitar as notas (Inputs) */
+/* Caixas de Entrada (Inputs) Elegantes */
 input {
-    padding: 12px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
+    width: 100%;
+    padding: 16px 20px;
+    margin-bottom: 25px;
+    border: 2px solid transparent; /* Começa sem borda visível */
+    border-radius: 15px;
     font-size: 16px;
-    margin-bottom: 18px;
+    background: rgba(255, 255, 255, 0.85); /* Fundo branco Translúcido */
+    color: #333;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra suave para profundidade */
 }
 
-/* Efeito ao clicar na caixa de texto */
+/* Estilo do placeholder */
+input::placeholder {
+    color: #bbb;
+}
+
+/* Efeito ao Clicar no Input (Borda e Brilho) */
 input:focus {
-    border-color: #6366f1;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2); /* Brilho roxo em volta */
+    border-color: #4facfe; /* Borda fica azul */
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Brilho azul */
 }
 
-/* Estilo para um botão (Caso você adicione um ao HTML) */
+/* Efeito ao passar o mouse sobre o input */
+input:hover {
+    background-color: #ffffff;
+}
+
+/* Botão Moderno e Vibrante */
 button {
-    background-color: #6366f1;
+    width: 100%;
+    padding: 18px;
+    /* Gradiente vibrante no botão */
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     color: white;
     border: none;
-    padding: 14px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #4f46e5; /* Roxo mais escuro ao passar o mouse */
-}
-
-button:active {
-    transform: scale(0.98); /* Efeito de "afundar" ao clicar */
-}
-
-/* Caixa onde a média vai aparecer */
-#resultado {
-    margin-top: 25px;
-    padding: 15px;
-    background-color: #e0e7ff; /* Fundo roxo bem clarinho */
-    border-left: 5px solid #6366f1;
-    border-radius: 6px;
-    color: #3730a3;
-    font-weight: bold;
-    text-align: center;
+    border-radius: 15px;
     font-size: 18px;
-    display: none; /* Fica invisível até o JavaScript ativar */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4); /* Sombra do botão */
+}
+
+/* Efeito ao Passar o Mouse no Botão */
+button:hover {
+    transform: translateY(-3px); /* Levanta um pouquinho */
+    box-shadow: 0 12px 30px rgba(79, 172, 254, 0.6); /* Sombra maior */
+}
+
+/* Efeito ao Clicar no Botão */
+button:active {
+    transform: translateY(-1px); /* Volta pro lugar */
+}
+
+/* Caixa de Resultado - Um painel de vidro menor */
+#resultado {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Translúcido */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #333;
+    text-align: center;
+    display: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    /* Animação suave para aparecer na tela */
+    animation: aparecer 0.5s ease-out forwards;
+}
+
+/* Estilos de texto para o resultado */
+#resultado p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* Destaque para a média final */
+#resultado strong {
+    font-size: 28px;
+    font-weight: 800;
+    color: #000000;
+}
+
+/* Criação da Animação do Resultado */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }

@@ -1,98 +1,200 @@
-/* Reset básico para manter tudo alinhado */
+/* style.css */
+
+/* Importando uma fonte elegante e super moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+/* Reset básico para remover margens e paddings padrão do navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Aplicando a nova fonte */
 }
 
-/* Fundo da página (um cinza bem clarinho e neutro) */
+/* O Fundo "UAU!" - Estilo Aurora Misturando Cores */
 body {
-    background-color: #e9ecef;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: #212529;
+    padding: 20px;
+    
+    /* Cor de base escura e misteriosa */
+    background-color: #111827; 
+
+    /* O EFEITO AURORA: Misturando Verde Voto, Azul Oficial e Roxo Moderno */
+    background-image: 
+        radial-gradient(at 10% 10%, #10b98150 0px, transparent 50%), /* Verde suave no topo esquerdo */
+        radial-gradient(at 90% 10%, #3b82f650 0px, transparent 50%), /* Azul suave no topo direito */
+        radial-gradient(at 50% 90%, #a855f750 0px, transparent 60%); /* Roxo suave no meio inferior */
+    
+    background-blend-mode: saturation; /* Mistura as cores de forma elegante */
 }
 
-/* O cartão principal da nossa "urna" */
+/* O Container do Voto - Efeito de Vidro Jateado (Glassmorphism) */
 .container {
-    background-color: #ffffff;
-    padding: 40px 30px;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.05); /* Translucidez extrema para o vidro */
+    backdrop-filter: blur(20px); /* O efeito de desfoque de vidro pesado */
+    -webkit-backdrop-filter: blur(20px); /* Para navegadores Safari */
+    
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil e brilhante de vidro */
+    padding: 50px 40px;
+    border-radius: 25px; /* Bordas bem arredondadas e amigáveis */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2); /* Sombra profunda e difusa para "flutuar" */
+    
     width: 100%;
-    max-width: 450px; /* Deixei um pouco mais largo por causa do seu placeholder longo */
-    border-top: 6px solid #28a745; /* Linha verde no topo para dar o clima de eleição */
-    display: flex;
-    flex-direction: column;
+    max-width: 420px;
+    text-align: center;
+    position: relative;
+    
+    /* Animação suave para aparecer na tela */
+    animation: slideIn 1s ease-out;
 }
 
-/* Título */
+/* Animação de entrada do container deslizando */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título escrito em "Neon Verde" */
 h1 {
-    text-align: center;
-    color: #343a40;
-    margin-bottom: 25px;
-    font-size: 28px;
+    color: #ffffff; /* Título branco para contraste */
+    margin-bottom: 35px;
+    font-size: 36px;
+    font-weight: 800; /* Texto bem grosso */
+    letter-spacing: 2px; /* Letras separadas */
     text-transform: uppercase;
-    letter-spacing: 1px;
+    
+    /* Efeito de brilho neon verde suave */
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.6),
+                 0 0 20px rgba(16, 185, 129, 0.4);
+    
+    position: relative;
+    display: inline-block;
 }
 
-/* Texto acima da caixa (Label) */
+/* Etiquetas (Labels) Brancas e Visíveis */
 label {
-    font-size: 15px;
-    font-weight: bold;
+    display: block;
+    text-align: left;
     margin-bottom: 8px;
-    color: #495057;
+    font-size: 14px;
+    font-weight: 600;
+    color: #e5e7eb; /* Cinza bem clarinho */
 }
 
-/* Caixa de digitar a idade (Input) */
+/* Caixas de Entrada (Inputs) Elegantes e Mais Escuras */
 input {
-    padding: 12px;
-    border: 2px solid #ced4da;
-    border-radius: 6px;
-    font-size: 15px;
-    margin-bottom: 20px;
-    transition: border-color 0.3s;
-}
-
-/* Efeito ao clicar na caixa de texto */
-input:focus {
-    border-color: #28a745; /* Fica verde ao clicar */
-    outline: none;
-}
-
-/* Botão "Checar idade" (Estilo botão CONFIRMA) */
-button {
-    background-color: #28a745; /* Verde urna eletrônica */
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 6px;
+    width: 100%;
+    padding: 16px 20px;
+    margin-bottom: 25px;
+    
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Borda de vidro */
+    border-radius: 12px;
     font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
+    
+    background-color: rgba(0, 0, 0, 0.15); /* Fundo translúcido escuro */
+    color: #ffffff; /* Texto branco */
+    transition: all 0.3s ease;
 }
 
-button:hover {
-    background-color: #218838; /* Verde mais escuro */
+/* Estilo do placeholder mais suave */
+input::placeholder {
+    color: #a1a1aa;
 }
 
-button:active {
-    transform: scale(0.98);
+/* Efeito ao Clicar no Input (Borda Brilhante) */
+input:focus {
+    outline: none;
+    border-color: #10b981; /* Borda fica verde brilhante */
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2); /* Brilho verde */
 }
 
-/* Caixa de resultado (Invisível no começo) */
-#resultado {
-    margin-top: 25px;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 6px;
-    text-align: center;
+/* Botão Verde Neon Vibrante */
+button {
+    width: 100%;
+    padding: 18px;
+    background-color: transparent; /* Começa transparente */
+    border: 2px solid #10b981; /* Borda verde neon */
+    color: #10b981; /* Texto verde neon */
+    
+    border-radius: 12px;
     font-size: 18px;
-    display: none; /* Só aparece quando o JS for ativado */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    margin-top: 15px;
+    
+    /* Brilho neon suave */
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+}
+
+/* Efeito ao Passar o Mouse no Botão - Preenche e Brilha Muito! */
+button:hover {
+    background-color: #10b981; /* Preenche com verde */
+    color: white; /* Texto fica branco */
+    
+    transform: translateY(-3px); /* Levanta um pouquinho */
+    
+    /* Aumenta o brilho neon verde */
+    box-shadow: 0 5px 25px rgba(16, 185, 129, 0.6),
+                0 0 35px rgba(16, 185, 129, 0.3);
+}
+
+/* Efeito ao Clicar no Botão */
+button:active {
+    transform: translateY(-1px); /* Volta pro lugar */
+}
+
+/* Caixa de Resultado - Um painel de vidro menor colado */
+#resultado {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    
+    background: rgba(255, 255, 255, 0.05); /* Mais transparente ainda */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    color: #ffffff;
+    text-align: center;
+    display: none; /* Fica oculto até o JS mandar aparecer */
+    
+    /* Animação suave para aparecer na tela */
+    animation: aparecer 0.5s ease-out forwards;
+}
+
+/* Estilos de texto para o resultado */
+#resultado p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* Destaque para a situação final */
+#resultado strong {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* Criação da Animação do Resultado */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }

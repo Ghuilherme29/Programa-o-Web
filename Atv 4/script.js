@@ -15,7 +15,7 @@ function RealizarVerificacao() {
 
     let checar = '';
     if (idade < 16) {
-     checar = "<strong style = 'color: red';> Não podem votar </strong> ";  
+     checar = "<strong style = 'color: red';> Não pode votar </strong> ";  
     } else if (idade < 18 || idade >= 65) {
        checar = "<strong style = 'color: blue';> Voto opcional </strong> ";
     } else {
