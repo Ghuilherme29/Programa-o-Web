@@ -1,0 +1,37 @@
+/* style.css */
+
+.footer {
+    /* Cores de fundo e do texto (Dark Theme) */
+    background-color: #121212;
+    color: #f1f1f1;
+    
+    /* Centraliza o texto e dá um respiro (espaçamento) */
+    text-align: center;
+    padding: 40px 20px;
+    
+    /* Fonte moderna */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Detalhe visual: Borda vermelha padrão SENAI no topo */
+    border-top: 4px solid #FF0000; 
+    
+    /* Sombra suave para dar profundidade */
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+    
+    /* Útil se o container pai for um Flexbox, empurra o footer para o final da página */
+    margin-top: auto; 
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    letter-spacing: 1px; /* Espaçamento sutil entre as letras */
+    font-weight: 500;
+}
+
+/* Efeito sutil ao passar o mouse por cima do footer */
+.footer:hover {
+    background-color: #1a1a1a;
+    transition: background-color 0.3s ease;
+}

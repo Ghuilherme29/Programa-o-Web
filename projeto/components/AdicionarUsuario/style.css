@@ -1,0 +1,90 @@
+/* style.css */
+
+/* Estilo principal do container (o "Card") */
+.formulario {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Títulos */
+.formulario h2 {
+    text-align: center;
+    color: #000000; /* Preto total para o título */
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Layout do formulário */
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Campos de digitação (Inputs) */
+.formulario input {
+    padding: 12px 15px;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao clicar no input (Focus) */
+.formulario input:focus {
+    border-color: #ff0000; /* Borda vermelha no foco */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+}
+
+/* Botão de Adicionar */
+.formulario button {
+    padding: 12px;
+    background-color: #000000; /* Botão preto */
+    color: #ffffff; /* Texto branco */
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse no botão */
+.formulario button:hover {
+    background-color: #333333; /* Cinza escuro no hover */
+}
+
+/* Linha divisória */
+.formulario hr {
+    border: 0;
+    height: 1px;
+    background-color: #ff0000; /* Linha vermelha */
+    margin: 30px 0;
+}
+
+/* Retira as bolinhas padrão da lista */
+.formulario ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo de cada usuário adicionado (Item da lista) */
+.formulario li {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border-left: 5px solid #ff0000; /* Detalhe vermelho na lateral esquerda */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 0.95rem;
+    color: #555;
+    word-wrap: break-word;
+}

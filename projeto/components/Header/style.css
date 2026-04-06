@@ -1,0 +1,46 @@
+/* style.css */
+
+/* Estilo do container do cabeçalho */
+.header {
+    background-color: #121212; /* Mesmo fundo escuro do footer */
+    color: #ffffff;
+    padding: 20px 40px;
+    
+    /* Flexbox para alinhar o conteúdo */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    
+    /* Detalhe visual na borda inferior */
+    border-bottom: 3px solid #FF0000; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    
+    /* Faz o header ficar fixo no topo da página ao rolar */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Estilo da Logo / Texto do Sistema */
+.header div {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: default;
+    
+    /* Efeito de degradê (Gradient) no texto */
+    background: linear-gradient(90deg, #ffffff, #a8a8a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Transição para a animação */
+    transition: transform 0.3s ease;
+}
+
+/* Pequeno efeito de zoom quando passar o mouse no nome do sistema */
+.header div:hover {
+    transform: scale(1.02);
+}
